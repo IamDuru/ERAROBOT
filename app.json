@@ -30,19 +30,16 @@
       }
     }
   ],
-  "scripts": {
-    "postdeploy": "pip install --upgrade pip setuptools && pip install -r requirements.txt"
-  },
   "env": {
     "API_ID": {
       "description": "ɢᴇᴛ ᴛʜɪs ᴠᴀʟᴜᴇ ғʀᴏᴍ my.telegram.org/apps.",
       "required": true,
-      "value": ""
+      "value":  "22652940"
     },
     "API_HASH": {
       "description": "ɢᴇᴛ ᴛʜɪs ᴠᴀʟᴜᴇ ғʀᴏᴍ my.telegram.org/apps.",
       "required": true,
-      "value": ""
+      "value":  "91ec0cf5f722101c98fef8f0c6aedd0e"
     },
     "OWNER_ID": {
       "description": "ʏᴏᴜʀ ᴜsᴇʀ ID ᴀs ᴀɴ ɪɴᴛᴇɢᴇʀ.",
@@ -62,22 +59,26 @@
     "LOGGER_ID": {
       "description": "ᴇᴠᴇɴᴛ ʟᴏɢs ᴄʜᴀɴɴᴇʟ  ᴛᴏ ɴᴏᴛᴇ ᴅᴏᴡɴ ɪᴍᴘᴏʀᴛᴀɴᴛ ʙᴏᴛ ʟᴇᴠᴇʟ ᴇᴠᴇɴᴛs, ᴇx: '-10023456'",
       "required": true,
-      "value": ""
+      "value":  "-1002243074516"
     },
     "MONGO_DB_URI": {
       "description": "ʀᴇǫᴜɪʀᴇᴅ ғᴏʀ ᴅᴀᴛᴀʙᴀsᴇ ᴄᴏɴɴᴇᴄᴛɪᴏɴs (ᴍᴏɴɢᴏ).",
-      "required": true,
-      "value": ""
+      "required": true
     },
     "TOKEN": {
       "description": "Get bot token from @BotFather on TG",
-      "required": true,
-      "value": ""
+      "required": true
     },
     "DEEP_API": {
       "description": "Your DEEP API key from https://deepai.org/",
-      "value": "",
       "required": false
+    },
+    "PYTHON_VERSION": {
+      "description": "Python version to use",
+      "value": "3.9.16"
     }
+  },
+  "scripts": {
+    "postdeploy": "pip install -r requirements.txt"
   }
 }
