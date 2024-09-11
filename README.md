@@ -12,8 +12,6 @@
  
                             𝗗𝗘𝗣𝗟𝗢𝗬𝗠𝗘𝗡𝗧 𝗠𝗘𝗧𝗛𝗢𝗗𝗦
 
-# <img align="right" height="200px" width="200px" alt="𝙶𝙸𝙵" src="https://github.com/IamDuru/IamDuru/blob/main/Robo.webp"/>
-# <img align="left" height="200px" width="200px" alt="𝙶𝙸𝙵" src="https://github.com/IamDuru/IamDuru/blob/main/Robo.webp"/>      
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 <h3 align="center">
