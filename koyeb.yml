@@ -1,37 +1,7 @@
-app:
-  name: erarobot
-
-  regions:
-  - fra
-
-  services:
-  - name: bot
-    instance_size: micro
-    env:
-      - key: API_ID
-        value: "22652940"
-      - key: API_HASH
-        value: "91ec0cf5f722101c98fef8f0c6aedd0e"
-      - key: OWNER_ID
-        value: "1679112664"
-      - key: DEV_USERS
-        value: "1679112664"
-      - key: OWNER_USERNAME
-        value: "OfficialDurgesh"
-      - key: LOGGER_ID
-        value: "-1002243074516"
-      - key: MONGO_DB_URI
-        value: ""
-      - key: TOKEN
-        value: ""
-      - key: DEEP_API
-        value: ""
-    ports:
-      - 8080
-    commands:
-      - pip install -r requirements.txt
-      - python3 -m ERAROBOT
-
-  buildpacks:
-    - url: https://github.com/heroku/heroku-buildpack-python
-    - url: https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest
+name: erarobot
+type: app
+docker:
+  file: Dockerfile
+  build_command: pip3 install --no-cache-dir --upgrade --requirement requirements.txt
+  run_command: bash start
+env: []
