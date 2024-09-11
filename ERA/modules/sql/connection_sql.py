@@ -5,7 +5,7 @@ from typing import Union
 from sqlalchemy import Boolean, Column, Integer, String, UnicodeText
 from sqlalchemy.sql.sqltypes import BigInteger
 
-from Ava.modules.sql import BASE, SESSION
+from ERA.modules.sql import BASE, SESSION
 
 
 class ChatAccessConnectionSettings(BASE):
