@@ -15,7 +15,7 @@
   ],
   "buildpacks": [
     {
-      "url": "https://github.com/heroku/heroku-buildpack-python"
+      "url": "heroku/python"
     },
     {
       "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
@@ -24,12 +24,15 @@
   "stack": "heroku-24",
   "addons": [
     {
+      "plan": "heroku-postgresql",
       "options": {
         "version": "14"
-      },
-      "plan": "heroku-postgresql"
+      }
     }
   ],
+  "scripts": {
+    "postdeploy": "pip install --upgrade pip setuptools && pip install -r requirements.txt"
+  },
   "env": {
     "API_ID": {
       "description": "ɢᴇᴛ ᴛʜɪs ᴠᴀʟᴜᴇ ғʀᴏᴍ my.telegram.org/apps.",
