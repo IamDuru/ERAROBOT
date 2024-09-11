@@ -1,0 +1,80 @@
+{
+  "name": "ᴇʀᴀʀᴏʙᴏᴛ",
+  "description": "Telegram Group Management Bot Written In Python Using python-telegram-bot.",
+  "repository": "https://github.com/IamDuru/ERAROBOT",
+  "logo": "https://telegra.ph/file/61296490da95c55a1d5ee.jpg",
+  "keywords": [
+    "python3",
+    "telegram",
+    "bot",
+    "ERAROBOT",
+    "telegram-bot",
+    "management",
+    "ptb",
+    "pyrogram"
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-python"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    }
+  ],
+  "stack": "heroku-24",
+  "addons": [
+    {
+      "options": {
+        "version": "14"
+      },
+      "plan": "heroku-postgresql"
+    }
+  ],
+  "env": {
+    "API_ID": {
+      "description": "ɢᴇᴛ ᴛʜɪs ᴠᴀʟᴜᴇ ғʀᴏᴍ my.telegram.org/apps.",
+      "required": true,
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "ɢᴇᴛ ᴛʜɪs ᴠᴀʟᴜᴇ ғʀᴏᴍ my.telegram.org/apps.",
+      "required": true,
+      "value": ""
+    },
+    "OWNER_ID": {
+      "description": "ʏᴏᴜʀ ᴜsᴇʀ ID ᴀs ᴀɴ ɪɴᴛᴇɢᴇʀ.",
+      "required": true,
+      "value": "1679112664"
+    },
+    "DEV_USERS": {
+      "description": "ᴅᴇᴠs ᴜsᴇʀ ID ᴀs ᴀɴ ɪɴᴛᴇɢᴇʀ.",
+      "required": true,
+      "value": "1679112664"
+    },
+    "OWNER_USERNAME": {
+      "description": "ʏᴏᴜʀ ᴛɢ ᴜsᴇʀɴᴀᴍᴇ",
+      "required": true,
+      "value": "OfficialDurgesh"
+    },
+    "LOGGER_ID": {
+      "description": "ᴇᴠᴇɴᴛ ʟᴏɢs ᴄʜᴀɴɴᴇʟ  ᴛᴏ ɴᴏᴛᴇ ᴅᴏᴡɴ ɪᴍᴘᴏʀᴛᴀɴᴛ ʙᴏᴛ ʟᴇᴠᴇʟ ᴇᴠᴇɴᴛs, ᴇx: '-10023456'",
+      "required": true,
+      "value": ""
+    },
+    "MONGO_DB_URI": {
+      "description": "ʀᴇǫᴜɪʀᴇᴅ ғᴏʀ ᴅᴀᴛᴀʙᴀsᴇ ᴄᴏɴɴᴇᴄᴛɪᴏɴs (ᴍᴏɴɢᴏ).",
+      "required": true,
+      "value": ""
+    },
+    "TOKEN": {
+      "description": "Get bot token from @BotFather on TG",
+      "required": true,
+      "value": ""
+    },
+    "DEEP_API": {
+      "description": "Your DEEP API key from https://deepai.org/",
+      "value": "",
+      "required": false
+    }
+  }
+}
