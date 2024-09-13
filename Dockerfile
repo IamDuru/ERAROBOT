@@ -64,7 +64,7 @@ RUN apt update && apt upgrade -y && \
 # Pypi package Repo upgrade
 RUN pip3 install --upgrade pip setuptools
 
-RUN git clone https://github.com/IamDuru/ERA /root/ERA
+RUN git clone https://github.com/IamDuru/ERA/root/ERA
 WORKDIR /root/ERA
 
 #Copy config file to /root/ERA/ERA
