@@ -1,7 +1,7 @@
 name: erarobot
-type: app
+type: web
 docker:
   file: Dockerfile
-  build_command: pip3 install --no-cache-dir --upgrade --requirement requirements.txt
-  run_command: bash start
+  build_command: pip3 install -U -r requirements.txt
+  run_command: python3 -m ERA
 env: []
