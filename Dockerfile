@@ -67,8 +67,8 @@ RUN pip3 install --upgrade pip setuptools
 RUN git clone https://github.com/IamDuru/ERA/root/ERA
 WORKDIR /root/ERA
 
-#Copy config file to /root/ERA/ERA
-COPY ./ERA/config.py ./ERA/config.py* /root/ERA/ERA/
+# Copy config file to /root/ERA/ERA
+COPY ./ERA/config.py /root/ERA/ERA/config.py
 
 ENV PATH="/home/bot/bin:$PATH"
 
@@ -76,4 +76,4 @@ ENV PATH="/home/bot/bin:$PATH"
 RUN pip3 install -U -r requirements.txt
 
 # Starting Worker
-CMD python3 -m ERA 
+CMD ["python3", "-m", "ERA"]
