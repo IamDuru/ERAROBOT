@@ -1,9 +1,7 @@
 name: erarobot
 type: app
 docker:
-  - image: python:3.8.5-slim-buster
-    build:
-      context: .
-      dockerfile: Dockerfile
-    run:
-      command: bash start
+  file: Dockerfile
+  build_command: pip3 install --no-cache-dir --upgrade --requirement requirements.txt
+  run_command: bash start
+env: []
