@@ -10,7 +10,7 @@ class Config(object):
     API_HASH = getenv("API_HASH")
     DEEP_API = getenv("DEEP_API")
     ARQ_API_KEY = getenv("ARQ__KEY", "TBPYLF-SIOYFX-JALTSV-QEAMXE-ARQ")
-    SPAMWATCH_API = getenv("SPAMWATCH_API", "t9HHtrsmy7faPQWloX8xCvdZK~puDP2RnHLpb~qijQqD94mhcMQdDP_xO0a_Iwe
+    SPAMWATCH_API = getenv("SPAMWATCH_API", "t9HHtrsmy7faPQWloX8xCvdZK~puDP2RnHLpb~qijQqD94mhcMQdDP_xO0a_Iwe")
     TOKEN = getenv("TOKEN")
     OWNER_ID =(getenv("OWNER_ID", 1679112664))
     OWNER_USERNAME = getenv("OWNER_USERNAME", "OfficialDurgesh")
