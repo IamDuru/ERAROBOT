@@ -89,4 +89,4 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
     CMD curl -f http://localhost/health || exit 1
 
 # Starting the bot
-CMD ["python3", "-m "ERA"]
+CMD ["python3", "-m", "ERA"]
