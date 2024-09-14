@@ -3,37 +3,37 @@ FROM python:3.8.5-slim-buster
 
 # Set environment variables
 ENV PIP_NO_CACHE_DIR=1
-ENV DEBI_FRONTEND=noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 
 # Update APT sources
-RUN sed -i.ak 's/us-west-2\.ec2\.//' /etc/apt/sources.list
+RUN sed -i.bak 's/us-west-2\.ec2\.//' /etc/apt/sources.list
 
 # Install required packages
-RUN apt update && upgrade -y && \
+RUN apt update && apt upgrade -y && \
     apt install --no-install-recommends -y \
-    deb-keyring \
+    debian-keyring \
     debian-archive-keyring \
     bash \
     bzip2 \
     curl \
     figlet \
     git \
-    util-linux \
+    util
     libffi-dev \
     libjpeg-dev \
     libjpeg62-turbo-dev \
- libwebp-dev \
+    libwebp-dev \
     linux-headers-amd64 \
     musl-dev \
-    musl
+    musl \
     neofetch \
     php-pgsql \
     python3-lxml \
     postgresql \
     postgresql-client \
-    python3-psyg2 \
+    python3-psycopg2 \
     libpq-dev \
-    libl4-openssl-dev \
+    libcurl4-openssl-dev \
     libxml2-dev \
     libxslt1-dev \
     python3-pip \
@@ -46,7 +46,7 @@ RUN apt update && upgrade -y && \
     jq \
     wget \
     python3 \
-    python3- \
+    python3-dev \
     libreadline-dev \
     libyaml-dev \
     gcc \
@@ -62,23 +62,23 @@ RUN apt update && upgrade -y && \
     unzip \
     libopus0 \
     libopus-dev \
-    && rm - /var/lib/apt/lists/* /var/cache/apt/archives/* /tmp/*
+    && rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/* /tmp/*
 
 # Upgrade pip and setuptools
 RUN pip3 install --upgrade pip setuptools
 
-# Clone the ERA repository
+# Clone the ERAROBOT repository
 RUN git clone https://github.com/IamDuru/ERAROBOT.git /root/ERA
 WORKDIR /root/ERA
 
 # Copy config file to /root/ERA/ERA
 COPY ./ERAROBOT/config.py /root/ERA/ERA/
 
- Set environment variables
+# Set environment variables
 ENV PATH="/home/bot/bin:$PATH"
 
 # Install Python requirements
-COPY.txt .
+COPY requirements.txt .
 RUN pip3 install -U -r requirements.txt
 
 # Expose necessary ports
