@@ -50,7 +50,7 @@ try:
     if environ.get("ENV"):
         from config import Config
     else:
-        from config import Development as Config
+        from config import Production as Config
 except Exception as ef:
     LOGGER.error(ef)  # Print Error
     LOGGER.error(format_exc())
