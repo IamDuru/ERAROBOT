@@ -1,7 +1,24 @@
-name: erarobot
-type: app
-docker:
-  file: Dockerfile
-  build_command: docker build -t my-app:latest .
-  run_command: bash start
-env: []
+name: python-worker
+
+# Specify the source of your application, e.g., GitHub repository
+source:
+  type: github
+  repository: https://github.com/IamDuru/ERAROBOT.git
+  branch: main  # or the branch your worker code is on
+
+# Define the services (like a worker or web service) in your deployment
+services:
+  - name: python-web
+    type: worker  # Use worker since it's not a web app
+    env: python
+    instance:
+      plan: nano  # Choose the instance type, adjust based on your workload
+    build:
+      commands:
+        - pip install -r requirements.txt  # Install dependencies
+    run:
+      command: python3 -m ERA  # Replace with your worker script name
+
+# Environment variables, if your worker needs any
+env:
+  ENV_VAR_NAME: "value"  # Define your environment variables here if needed
