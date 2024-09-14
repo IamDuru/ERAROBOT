@@ -1,4 +1,4 @@
-name: python-worker
+name: erarobot
 
 # Specify the source of your application, e.g., GitHub repository
 source:
@@ -8,7 +8,7 @@ source:
 
 # Define the services (like a worker or web service) in your deployment
 services:
-  - name: python-web
+  - name: python-worker
     type: worker  # Use worker since it's not a web app
     env: python
     instance:
