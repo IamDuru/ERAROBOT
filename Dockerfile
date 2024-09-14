@@ -64,11 +64,11 @@ RUN apt update && apt upgrade -y && \
 # Pypi package Repo upgrade
 RUN pip3 install --upgrade pip setuptools
 
-RUN git clone https://github.com/IamDuru/ERA/root/ERA
+RUN git clone https://github.com/IamDuru/ERA /root/ERA
 WORKDIR /root/ERA
 
-# Copy config file to /root/ERA/ERA
-COPY ./ERA/config.py /root/ERA/ERA/config.py
+#Copy config file to /root/Ava/Ava
+COPY ./Ava/config.py ./ERA/config.py* /root/ERA/ERA/
 
 ENV PATH="/home/bot/bin:$PATH"
 
@@ -76,4 +76,4 @@ ENV PATH="/home/bot/bin:$PATH"
 RUN pip3 install -U -r requirements.txt
 
 # Starting Worker
-CMD ["python3", "-m", "ERA"]
+CMD ["python3","-m","ERA"]
