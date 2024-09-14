@@ -63,7 +63,7 @@ RUN apt-get update && apt-get upgrade -y && \
         libopus0 \
         libopus-dev && \
     apt-get clean && \
-    rm -rf /var/lib/aptvar/cache/apt/archives/* /tmp/*
+    rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/* /tmp/*
 
 # Upgrade pip and setuptools
 RUN pip3 install --upgrade pip setuptools
@@ -72,14 +72,10 @@ RUN pip3 install --upgrade pip setuptools
 RUN git clone https://github.com/IamDuru/ERAROBOT.git /root/ERA
 WORKDIR /root/ERA
 
-# Copy config file to /root/ERA/ERA
-COPY .ERAROBOT/config.py /root/ERA/ERA/
-
 # Set environment variables
 ENV PATH="/home/bot/bin:$PATH"
 
 # Install Python requirements
-COPY requirements.txt .
 RUN pip3 install -U -r requirements.txt
 
 # Expose necessary ports
