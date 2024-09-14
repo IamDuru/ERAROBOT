@@ -73,7 +73,7 @@ RUN git clone https://github.com/IamDuru/ERAROBOT.git /root/ERA
 WORKDIR /root/ERA
 
 # Copy config file to /root/ERA/ERA
-COPY ./ERAROBOT/config.py /root/ERA/ERA/
+COPY .ERAROBOT/config.py /root/ERA/ERA/
 
 # Set environment variables
 ENV PATH="/home/bot/bin:$PATH"
