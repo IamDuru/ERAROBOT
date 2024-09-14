@@ -68,7 +68,7 @@ RUN git clone https://github.com/IamDuru/ERA /root/ERA
 WORKDIR /root/ERA
 
 #Copy config file to /root/ERA/ERA
-COPY ./ERAROBOT/config.py ./ERAROBOT /config.py* /root/ERA/ERA/
+COPY ./ERAROBOT/config.py ./ERAROBOT/config.py* /root/ERA/ERA/
 
 ENV PATH="/home/bot/bin:$PATH"
 
