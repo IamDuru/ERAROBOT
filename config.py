@@ -17,7 +17,7 @@ class Config(object):
     SPAMWATCH_API = getenv("SPAMWATCH_API", "t9HHtrsmy7faPQWloX8xCvdZK~puDP2RnHLpb~qijQqDj94mhcMQdDP_xO0a_Iwe")
     TOKEN = getenv("TOKEN")
     OWNER_ID = int(getenv("OWNER_ID", 1679112664))
-    OWNERenv("OWNER_USERNAME", "OfficialDurgesh")
+    OWNER_USERNAME = getenv("OWNER_USERNAME", "OfficialDurgesh")  # Corrected line!
     SUPPORT_CHAT = getenv("SUPPORT_CHAT", "DNS_NETWORK")
     LOGGER_ID = int(getenv("LOGGER_ID", "-1002243074516"))
     MONGO_URI = getenv("MONGO_DB_URI")
