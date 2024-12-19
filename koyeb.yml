@@ -1,6 +1,5 @@
 name: erarobot
 
-# Specify the source of your application, e.g., GitHub repository
 source:
   type: github
   repository: https://github.com/IamDuru/ERAROBOT.git
@@ -19,6 +18,3 @@ services:
     run:
       command: python3 -m ERA  # Replace with your worker script name
 
-# Environment variables, if your worker needs any
-env:
-  ENV_VAR_NAME: "value"  # Define your environment variables here if needed
